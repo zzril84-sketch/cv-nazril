@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhamad Nadzril Ain - CV Digital Premium</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- QRCode.js -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f0f2f5;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        /* Google Font fallback */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.10), 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* ===== HEADER / HERO ===== */
+        .header {
+            background: linear-gradient(135deg, #0f1b2d 0%, #1a3050 40%, #2c5f8a 100%);
+            color: #ffffff;
+            padding: 50px 50px 40px;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #fdcb6e, #e17055, #00cec9, #0984e3);
+            background-size: 200% 100%;
+            animation: gradientMove 4s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 4px solid rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+            backdrop-filter: blur(4px);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .avatar .avatar-placeholder {
+            font-size: 56px;
+            opacity: 0.9;
+        }
+
+        .avatar-status {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 18px;
+            height: 18px;
+            background: #00b894;
+            border: 3px solid #0f1b2d;
+            border-radius: 50%;
+            display: none;
+        }
+
+        .header-text {
+            flex: 1;
+            min-width: 240px;
+        }
+
+        .header-text h1 {
+            font-size: 38px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            margin-bottom: 6px;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #ffffff 60%, rgba(255,255,255,0.7));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-text .title {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+        }
+
+        .header-text .title-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .title-badge {
+            font-size: 12px;
+            font-weight: 500;
+            padding: 4px 14px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            letter-spacing: 0.5px;
+        }
+
+        .header-text .tagline {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.65);
+            max-width: 550px;
+            line-height: 1.7;
+            margin-top: 4px;
+        }
+
+        /* ===== CONTACT BAR IN HEADER ===== */
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 30px;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .contact-bar a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.85);
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .contact-item:hover {
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .contact-item i {
+            width: 18px;
+            text-align: center;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-item:hover i {
+            color: #fdcb6e;
+        }
+
+        /* ===== MAIN LAYOUT (2 Columns) ===== */
+        .main {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 0;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            background: #f8fafc;
+            padding: 35px 28px 40px;
+            border-right: 1px solid #e9edf2;
+        }
+
+        .sidebar-section {
+            margin-bottom: 32px;
+        }
+
+        .sidebar-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar-section h3 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #0f1b2d;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2c5f8a;
+            display: inline-block;
+            position: relative;
+        }
+
+        .sidebar-section h3 i {
+            margin-right: 8px;
+            color: #2c5f8a;
+            font-size: 14px;
+        }
+
+        /* ===== SOCIAL MEDIA SIDEBAR ===== */
+        .social-sidebar {
+            margin-bottom: 32px;
+        }
+
+        .social-sidebar h3 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #0f1b2d;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2c5f8a;
+            display: inline-block;
+        }
+
+        .social-sidebar h3 i {
+            margin-right: 8px;
+            color: #2c5f8a;
+        }
+
+        .social-btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            border-radius: 12px;
+            background: #ffffff;
+            border: 1px solid #e9edf2;
+            text-decoration: none;
+            color: #1e293b;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            border-radius: 0 3px 3px 0;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .social-btn:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            border-color: transparent;
+        }
+
+        .social-btn:hover::before {
+            opacity: 1;
+        }
+
+        .social-btn i {
+            width: 22px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .social-btn .btn-label {
+            flex: 1;
+        }
+
+        .social-btn .btn-arrow {
+            font-size: 12px;
+            opacity: 0.3;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .social-btn:hover .btn-arrow {
+            opacity: 0.8;
+            transform: translateX(3px);
+        }
+
+        /* Social button colors */
+        .social-btn.whatsapp:hover { background: #e8f5e9; border-color: #25D366; }
+        .social-btn.whatsapp:hover::before { background: #25D366; }
+        .social-btn.whatsapp i { color: #25D366; }
+
+        .social-btn.instagram:hover { background: #fce4ec; border-color: #E4405F; }
+        .social-btn.instagram:hover::before { background: #E4405F; }
+        .social-btn.instagram i { color: #E4405F; }
+
+        .social-btn.youtube:hover { background: #ffebee; border-color: #FF0000; }
+        .social-btn.youtube:hover::before { background: #FF0000; }
+        .social-btn.youtube i { color: #FF0000; }
+
+        .social-btn.tiktok:hover { background: #f0f0f0; border-color: #000000; }
+        .social-btn.tiktok:hover::before { background: #000000; }
+        .social-btn.tiktok i { color: #000000; }
+
+        .social-btn.facebook:hover { background: #e3f2fd; border-color: #1877F2; }
+        .social-btn.facebook:hover::before { background: #1877F2; }
+        .social-btn.facebook i { color: #1877F2; }
+
+        .social-btn.email:hover { background: #fff3e0; border-color: #EA4335; }
+        .social-btn.email:hover::before { background: #EA4335; }
+        .social-btn.email i { color: #EA4335; }
+
+        .social-btn.maps:hover { background: #e8f5e9; border-color: #34A853; }
+        .social-btn.maps:hover::before { background: #34A853; }
+        .social-btn.maps i { color: #34A853; }
+
+        .social-btn.website:hover { background: #f3e5f5; border-color: #9C27B0; }
+        .social-btn.website:hover::before { background: #9C27B0; }
+        .social-btn.website i { color: #9C27B0; }
+
+        .social-btn.linkedin:hover { background: #e3f2fd; border-color: #0A66C2; }
+        .social-btn.linkedin:hover::before { background: #0A66C2; }
+        .social-btn.linkedin i { color: #0A66C2; }
+
+        /* ===== QR CODE SECTION ===== */
+        .qr-section {
+            margin-bottom: 32px;
+        }
+
+        .qr-section h3 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #0f1b2d;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2c5f8a;
+            display: inline-block;
+        }
+
+        .qr-section h3 i {
+            margin-right: 8px;
+            color: #2c5f8a;
+        }
+
+        .qr-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .qr-item {
+            background: #ffffff;
+            border: 1px solid #e9edf2;
+            border-radius: 12px;
+            padding: 12px;
+            text-align: center;
+            transition: all 0.25s ease;
+        }
+
+        .qr-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            border-color: #d0d7e0;
+            transform: translateY(-2px);
+        }
+
+        .qr-item .qr-label {
+            font-size: 10px;
+            font-weight: 600;
+            color: #64748b;
+            margin-top: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .qr-item .qr-code-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70px;
+        }
+
+        .qr-item .qr-code-container canvas,
+        .qr-item .qr-code-container img {
+            width: 70px !important;
+            height: 70px !important;
+            border-radius: 4px;
+        }
+
+        /* ===== EDUCATION ===== */
+        .education-item {
+            margin-bottom: 18px;
+            padding-left: 16px;
+            border-left: 3px solid #dce1e8;
+            transition: border-color 0.3s;
+        }
+
+        .education-item:hover {
+            border-left-color: #2c5f8a;
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-item .institution {
+            font-weight: 600;
+            font-size: 14px;
+            color: #0f1b2d;
+        }
+
+        .education-item .degree {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 2px;
+        }
+
+        .education-item .year {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 3px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: #f1f5f9;
+            padding: 2px 10px;
+            border-radius: 10px;
+        }
+
+        /* ===== SKILLS ===== */
+        .skill-group {
+            margin-bottom: 18px;
+        }
+
+        .skill-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-group h4 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .skill-item {
+            margin-bottom: 10px;
+        }
+
+        .skill-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-item .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .skill-item .skill-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: #334155;
+        }
+
+        .skill-item .skill-percent {
+            font-size: 11px;
+            font-weight: 600;
+            color: #94a3b8;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 6px;
+            background: #e9edf2;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-bar .skill-progress {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #2c5f8a, #4a90c4);
+            transition: width 1s ease;
+            position: relative;
+        }
+
+        .skill-bar .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* ===== CERTIFICATIONS (Sidebar) ===== */
+        .cert-sidebar-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px dashed #e9edf2;
+        }
+
+        .cert-sidebar-item:last-child {
+            border-bottom: none;
+        }
+
+        .cert-sidebar-item i {
+            color: #2c5f8a;
+            font-size: 14px;
+            margin-top: 3px;
+            width: 16px;
+        }
+
+        .cert-sidebar-item .cert-text {
+            font-size: 13px;
+            color: #475569;
+        }
+
+        .cert-sidebar-item .cert-text strong {
+            color: #0f1b2d;
+            font-weight: 600;
+        }
+
+        .cert-sidebar-item .cert-text .cert-date {
+            font-size: 11px;
+            color: #94a3b8;
+            display: block;
+            margin-top: 1px;
+        }
+
+        /* ===== CONTENT (Right Column) ===== */
+        .content {
+            padding: 35px 40px 40px 35px;
+        }
+
+        .content-section {
+            margin-bottom: 35px;
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-section h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f1b2d;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-section h3::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, #e9edf2, transparent);
+        }
+
+        .content-section h3 i {
+            font-size: 20px;
+            color: #2c5f8a;
+        }
+
+        /* ===== PROFILE TEXT ===== */
+        .profile-text {
+            font-size: 14.5px;
+            color: #475569;
+            line-height: 1.85;
+        }
+
+        /* ===== EXPERIENCE / ORGANIZATION ===== */
+        .exp-item {
+            margin-bottom: 22px;
+            padding-bottom: 22px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .exp-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+
+        .exp-header .exp-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: #0f1b2d;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .exp-header .exp-title i {
+            font-size: 14px;
+            color: #2c5f8a;
+        }
+
+        .exp-header .exp-org {
+            font-size: 14px;
+            color: #2c5f8a;
+            font-weight: 500;
+        }
+
+        .exp-header .exp-date {
+            font-size: 12px;
+            color: #94a3b8;
+            background: #f1f5f9;
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .exp-desc {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 8px;
+            padding-left: 0;
+            line-height: 1.7;
+        }
+
+        .exp-desc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .exp-desc ul li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 5px;
+        }
+
+        .exp-desc ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 2px;
+            color: #2c5f8a;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* ===== ACHIEVEMENTS ===== */
+        .achievement-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px dashed #f1f5f9;
+        }
+
+        .achievement-item:last-child {
+            border-bottom: none;
+        }
+
+        .achievement-item i {
+            color: #fdcb6e;
+            font-size: 18px;
+            margin-top: 2px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .achievement-item .ach-text {
+            font-size: 14px;
+            color: #475569;
+        }
+
+        .achievement-item .ach-text strong {
+            color: #0f1b2d;
+            font-weight: 600;
+        }
+
+        .achievement-item .ach-text .ach-date {
+            font-size: 12px;
+            color: #94a3b8;
+            display: block;
+            margin-top: 2px;
+        }
+
+        /* ===== FIND ME ONLINE SECTION ===== */
+        .find-me-online {
+            margin-top: 12px;
+        }
+
+        .find-me-online h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f1b2d;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .find-me-online h3::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, #e9edf2, transparent);
+        }
+
+        .find-me-online h3 i {
+            color: #2c5f8a;
+            font-size: 20px;
+        }
+
+        .find-me-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .find-me-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 12px;
+            background: #f8fafc;
+            border: 1px solid #e9edf2;
+            text-decoration: none;
+            color: #1e293b;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.25s ease;
+        }
+
+        .find-me-btn i {
+            font-size: 18px;
+        }
+
+        .find-me-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            border-color: transparent;
+        }
+
+        .find-me-btn.btn-wa:hover { background: #25D366; color: #fff; }
+        .find-me-btn.btn-ig:hover { background: #E4405F; color: #fff; }
+        .find-me-btn.btn-yt:hover { background: #FF0000; color: #fff; }
+        .find-me-btn.btn-tt:hover { background: #000000; color: #fff; }
+        .find-me-btn.btn-fb:hover { background: #1877F2; color: #fff; }
+        .find-me-btn.btn-em:hover { background: #EA4335; color: #fff; }
+        .find-me-btn.btn-gm:hover { background: #34A853; color: #fff; }
+        .find-me-btn.btn-web:hover { background: #9C27B0; color: #fff; }
+        .find-me-btn.btn-li:hover { background: #0A66C2; color: #fff; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .header {
+                padding: 35px 25px 30px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-text h1 {
+                font-size: 28px;
+            }
+
+            .header-text .title-badges {
+                justify-content: center;
+            }
+
+            .contact-bar {
+                justify-content: center;
+            }
+
+            .main {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #e9edf2;
+                padding: 28px 22px;
+            }
+
+            .content {
+                padding: 28px 22px;
+            }
+
+            .avatar {
+                width: 110px;
+                height: 110px;
+                font-size: 40px;
+            }
+
+            .qr-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .find-me-grid {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 25px 18px 22px;
+            }
+
+            .header-text h1 {
+                font-size: 22px;
+            }
+
+            .sidebar {
+                padding: 22px 16px;
+            }
+
+            .content {
+                padding: 22px 16px;
+            }
+
+            .exp-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .contact-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .qr-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .social-btn-group {
+                gap: 6px;
+            }
+
+            .social-btn {
+                padding: 8px 14px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .qr-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ===== PRINT ===== */
+        @media print {
+            body {
+                padding: 0;
+                background: #ffffff;
+                font-size: 11px;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+            }
+
+            .header {
+                padding: 25px 30px 20px;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .sidebar {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .skill-bar .skill-progress {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .skill-bar .skill-progress::after {
+                animation: none !important;
+                display: none;
+            }
+
+            .social-btn:hover,
+            .find-me-btn:hover,
+            .education-item:hover {
+                transform: none !important;
+                box-shadow: none !important;
+            }
+
+            .find-me-btn:hover {
+                background: #f8fafc !important;
+                color: #1e293b !important;
+                border-color: #e9edf2 !important;
+            }
+
+            .main {
+                grid-template-columns: 260px 1fr;
+            }
+
+            .content {
+                padding: 20px 25px 25px;
+            }
+
+            .sidebar {
+                padding: 20px 18px 25px;
+            }
+
+            .avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 34px;
+            }
+
+            .header-text h1 {
+                font-size: 26px;
+            }
+
+            .qr-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .qr-item .qr-code-container canvas,
+            .qr-item .qr-code-container img {
+                width: 55px !important;
+                height: 55px !important;
+            }
+
+            .container:hover {
+                box-shadow: none;
+            }
+
+            .header::after {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== CONTAINER ===== -->
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+            <div class="header-content">
+                <div class="avatar-wrapper">
+                    <div class="avatar">
+                        <span class="avatar-placeholder">NA</span>
+                    </div>
+                </div>
+                <div class="header-text">
+                    <h1>MUHAMAD NADZRIL AIN</h1>
+                    <div class="title">Administrative Staff | Office Administration</div>
+                    <div class="title-badges">
+                        <span class="title-badge">Graphic Design Enthusiast</span>
+                        <span class="title-badge">Digital Creator</span>
+                        <span class="title-badge">Fresh Graduate</span>
+                    </div>
+                    <div class="tagline">
+                        Individu yang disiplin, bertanggung jawab, komunikatif, dan memiliki semangat belajar tinggi. 
+                        Berpengalaman dalam organisasi dan siap berkontribusi di lingkungan profesional yang dinamis.
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-bar">
+                <a href="https://wa.me/6288294523352" target="_blank" class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    +62 882-9452-3352
+                </a>
+                <a href="mailto:zzril84@gmail.com" class="contact-item">
+                    <i class="far fa-envelope"></i>
+                    zzril84@gmail.com
+                </a>
+                <a href="https://maps.app.goo.gl/C8zA6MYpfeZcTCUg7" target="_blank" class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Serang, Banten
+                </a>
+                <span class="contact-item">
+                    <i class="fas fa-globe-asia"></i>
+                    Indonesia
+                </span>
+            </div>
+        </header>
+
+        <!-- ===== MAIN ===== -->
+        <div class="main">
+
+            <!-- ===== SIDEBAR ===== -->
+            <aside class="sidebar">
+
+                <!-- Social Media Links -->
+                <div class="social-sidebar">
+                    <h3><i class="fas fa-share-alt"></i> Kontak & Media</h3>
+                    <div class="social-btn-group">
+                        <a href="https://wa.me/6288294523352" target="_blank" class="social-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="btn-label">WhatsApp</span>
+                            <span class="btn-arrow"><i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                        <a href="https://www.instagram.com/_mnazhan11" target="_blank" class="social-btn instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span class="btn-label">Instagram</span>
+                            <span class="btn-arrow"><i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                        <a href="https://www.youtube.com/@muhammadnadzril6163" target="_blank" class="social-btn youtube">
+                            <i class="fab fa-youtube"></i>
+                            <span class="btn-label">YouTube</span>
+                            <span class="btn-arrow"><i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                        <a href="https://www.tiktok.com/@dzz_zrll?_r=1&_t=ZS-97Ji9RyivG3" target="_blank" class="social-btn tiktok">
+                            <i class="fab fa-tiktok"></i>
+                            <span class="btn-label">TikTok</span>
+                            <span class="btn-arrow"><i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                        <a href="https://www.facebook.com/share/18rCPHEmdn/" target="_blank" class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span class="btn-label">Facebook</span>
+                            <span class="btn-arrow"><i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                        <a href="mailto:zzril84@gmail.com" class="social-btn email">
+                            <i class="far fa-envelope"></i>
+                            <span class="btn-label">Email</span>
+                            <span class="btn-arrow"><i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                        <a href="https://maps.app.goo.gl/C8zA6MYpfeZcTCUg7" target="_blank" class="social-btn maps">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="btn-label">Google Maps</span>
+                            <span class="btn-arrow"><i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                        <a href="#" target="_blank" class="social-btn website">
+                            <i class="fas fa-globe"></i>
+                            <span class="btn-label">Portfolio</span>
+                            <span class="btn-arrow"><i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                        <a href="#" target="_blank" class="social-btn linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span class="btn-label">LinkedIn</span>
+                            <span class="btn-arrow"><i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- QR Codes -->
+                <div class="qr-section">
+                    <h3><i class="fas fa-qrcode"></i> QR Code</h3>
+                    <div class="qr-grid">
+                        <div class="qr-item" id="qr-whatsapp">
+                            <div class="qr-code-container"></div>
+                            <div class="qr-label">
+                                <i class="fab fa-whatsapp" style="color:#25D366;"></i> WhatsApp
+                            </div>
+                        </div>
+                        <div class="qr-item" id="qr-instagram">
+                            <div class="qr-code-container"></div>
+                            <div class="qr-label">
+                                <i class="fab fa-instagram" style="color:#E4405F;"></i> Instagram
+                            </div>
+                        </div>
+                        <div class="qr-item" id="qr-youtube">
+                            <div class="qr-code-container"></div>
+                            <div class="qr-label">
+                                <i class="fab fa-youtube" style="color:#FF0000;"></i> YouTube
+                            </div>
+                        </div>
+                        <div class="qr-item" id="qr-tiktok">
+                            <div class="qr-code-container"></div>
+                            <div class="qr-label">
+                                <i class="fab fa-tiktok"></i> TikTok
+                            </div>
+                        </div>
+                        <div class="qr-item" id="qr-facebook">
+                            <div class="qr-code-container"></div>
+                            <div class="qr-label">
+                                <i class="fab fa-facebook-f" style="color:#1877F2;"></i> Facebook
+                            </div>
+                        </div>
+                        <div class="qr-item" id="qr-maps">
+                            <div class="qr-code-container"></div>
+                            <div class="qr-label">
+                                <i class="fas fa-map-marker-alt" style="color:#34A853;"></i> Google Maps
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pendidikan -->
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Pendidikan</h3>
+
+                    <div class="education-item">
+                        <div class="institution">Universitas Pamulang Serang</div>
+                        <div class="degree">S1 Sistem Komputer</div>
+                        <div class="year"><i class="far fa-clock"></i> Dalam Proses</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="institution">Madrasah Aliyah Manbaussalam</div>
+                        <div class="degree">Madrasah Aliyah</div>
+                        <div class="year"><i class="fas fa-check-circle" style="color:#00b894;"></i> Lulus</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="institution">MTs Manbaussalam</div>
+                        <div class="degree">Madrasah Tsanawiyah</div>
+                        <div class="year"><i class="fas fa-check-circle" style="color:#00b894;"></i> Lulus</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="institution">SD Islam Manbaussalam</div>
+                        <div class="degree">Sekolah Dasar</div>
+                        <div class="year"><i class="fas fa-check-circle" style="color:#00b894;"></i> Lulus</div>
+                    </div>
+                </div>
+
+                <!-- Hard Skills -->
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-cogs"></i> Hard Skills</h3>
+                    <div class="skill-group">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Microsoft Word</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Microsoft Excel</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Microsoft PowerPoint</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Microsoft Office</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CorelDRAW</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Administrasi Perkantoran</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Pengolahan Data & Data Entry</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Manajemen Dokumen</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Internet & Email Management</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Desain Grafis Dasar</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-users"></i> Soft Skills</h3>
+                    <div class="skill-group">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Leadership</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Teamwork</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Communication</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Public Speaking</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Problem Solving</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Time Management</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Discipline</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Adaptability</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Critical Thinking</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sertifikat & Pelatihan -->
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-certificate"></i> Sertifikat & Pelatihan</h3>
+                    <div class="cert-sidebar-item">
+                        <i class="fas fa-award"></i>
+                        <div class="cert-text">
+                            <strong>Sertifikat Paskibraka</strong>
+                            <span class="cert-date">Tingkat Kabupaten</span>
+                        </div>
+                    </div>
+                    <div class="cert-sidebar-item">
+                        <i class="fas fa-certificate"></i>
+                        <div class="cert-text">
+                            <strong>Pelatihan Kepemimpinan</strong>
+                            <span class="cert-date">Organisasi Sekolah</span>
+                        </div>
+                    </div>
+                    <div class="cert-sidebar-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <div class="cert-text">
+                            <strong>Microsoft Office</strong>
+                            <span class="cert-date">Kompetensi Dasar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bahasa -->
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-language"></i> Bahasa</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Bahasa Indonesia</span>
+                            <span class="skill-percent">Aktif</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 100%; background: linear-gradient(90deg, #00b894, #00cec9);"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Bahasa Inggris</span>
+                            <span class="skill-percent">Pasif</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 55%; background: linear-gradient(90deg, #fdcb6e, #e17055);"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Bahasa Arab</span>
+                            <span class="skill-percent">Dasar</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 40%; background: linear-gradient(90deg, #74b9ff, #0984e3);"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- ===== CONTENT ===== -->
+            <main class="content">
+
+                <!-- Profil Profesional -->
+                <section class="content-section">
+                    <h3>
+                        <i class="fas fa-user-tie"></i>
+                        Profil Profesional
+                    </h3>
+                    <p class="profile-text">
+                        Saya merupakan individu yang disiplin, bertanggung jawab, komunikatif, dan memiliki semangat belajar tinggi. 
+                        Berpengalaman dalam kegiatan organisasi sekolah serta pernah menjadi anggota Paskibraka tingkat Kabupaten. 
+                        Memiliki kemampuan administrasi, pengolahan data, desain grafis dasar, dan penguasaan Microsoft Office yang baik. 
+                        Terbiasa bekerja secara individu maupun tim serta mampu beradaptasi dengan lingkungan kerja yang dinamis.
+                    </p>
+                </section>
+
+                <!-- Pengalaman Organisasi -->
+                <section class="content-section">
+                    <h3>
+                        <i class="fas fa-users"></i>
+                        Pengalaman Organisasi
+                    </h3>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-title">
+                                <i class="fas fa-flag"></i>
+                                Paskibraka Tingkat Kabupaten
+                            </span>
+                            <span class="exp-date">2023</span>
+                        </div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li>Lolos seleksi Paskibraka tingkat Kabupaten</li>
+                                <li>Mengikuti pelatihan kedisiplinan dan kepemimpinan</li>
+                                <li>Berpartisipasi dalam upacara resmi tingkat Kabupaten</li>
+                                <li>Mengembangkan kemampuan kerja sama tim dan tanggung jawab</li>
+                                <li>Menunjukkan komitmen, integritas, dan disiplin tinggi</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-title">
+                                <i class="fas fa-school"></i>
+                                Organisasi Sekolah
+                            </span>
+                            <span class="exp-date">2021 - 2023</span>
+                        </div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li>Aktif dalam kegiatan organisasi sekolah</li>
+                                <li>Membantu koordinasi kegiatan dan acara sekolah</li>
+                                <li>Berkolaborasi dengan anggota organisasi untuk mencapai target kegiatan</li>
+                                <li>Mengembangkan kemampuan komunikasi dan kepemimpinan</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="exp-item" style="border-bottom:none;padding-bottom:0;">
+                        <div class="exp-header">
+                            <span class="exp-title">
+                                <i class="fas fa-university"></i>
+                                Himpunan Mahasiswa Sistem Komputer
+                            </span>
+                            <span class="exp-date">2024 - Sekarang</span>
+                        </div>
+                        <div class="exp-header" style="margin-top:2px;">
+                            <span class="exp-org">Universitas Pamulang</span>
+                        </div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li>Berpartisipasi aktif dalam kegiatan organisasi kemahasiswaan</li>
+                                <li>Terlibat dalam diskusi dan pengembangan kompetensi mahasiswa</li>
+                                <li>Mengembangkan jaringan dan relasi di lingkungan kampus</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Prestasi -->
+                <section class="content-section">
+                    <h3>
+                        <i class="fas fa-trophy"></i>
+                        Prestasi
+                    </h3>
+                    <div class="achievement-item">
+                        <i class="fas fa-medal"></i>
+                        <div class="ach-text">
+                            <strong>Lulus Seleksi Paskibraka</strong> — Tingkat Kabupaten
+                            <span class="ach-date">2023</span>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <i class="fas fa-star"></i>
+                        <div class="ach-text">
+                            <strong>Pengurus Organisasi Sekolah Aktif</strong>
+                            <span class="ach-date">2021 - 2023</span>
+                        </div>
+                    </div>
+                    <div class="achievement-item" style="border-bottom:none;">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="ach-text">
+                            <strong>Kompetensi Microsoft Office</strong> — Penguasaan Aplikasi Perkantoran
+                            <span class="ach-date">Sertifikasi Dasar</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Find Me Online -->
+                <section class="find-me-online">
+                    <h3>
+                        <i class="fas fa-hashtag"></i>
+                        Temukan Saya Online
+                    </h3>
+                    <div class="find-me-grid">
+                        <a href="https://wa.me/6288294523352" target="_blank" class="find-me-btn btn-wa">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://www.instagram.com/_mnazhan11" target="_blank" class="find-me-btn btn-ig">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@muhammadnadzril6163" target="_blank" class="find-me-btn btn-yt">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                        <a href="https://www.tiktok.com/@dzz_zrll?_r=1&_t=ZS-97Ji9RyivG3" target="_blank" class="find-me-btn btn-tt">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.facebook.com/share/18rCPHEmdn/" target="_blank" class="find-me-btn btn-fb">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="mailto:zzril84@gmail.com" class="find-me-btn btn-em">
+                            <i class="far fa-envelope"></i> Email
+                        </a>
+                        <a href="https://maps.app.goo.gl/C8zA6MYpfeZcTCUg7" target="_blank" class="find-me-btn btn-gm">
+                            <i class="fas fa-map-marker-alt"></i> Google Maps
+                        </a>
+                        <a href="#" target="_blank" class="find-me-btn btn-web">
+                            <i class="fas fa-globe"></i> Portfolio
+                        </a>
+                        <a href="#" target="_blank" class="find-me-btn btn-li">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn
+                        </a>
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
+        <!-- /main -->
+
+    </div>
+    <!-- /container -->
+
+    <!-- QR Code Generator Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Generate QR Codes for each social platform
+            const qrConfigs = [
+                { id: 'qr-whatsapp', url: 'https://wa.me/6288294523352' },
+                { id: 'qr-instagram', url: 'https://www.instagram.com/_mnazhan11' },
+                { id: 'qr-youtube', url: 'https://www.youtube.com/@muhammadnadzril6163' },
+                { id: 'qr-tiktok', url: 'https://www.tiktok.com/@dzz_zrll' },
+                { id: 'qr-facebook', url: 'https://www.facebook.com/share/18rCPHEmdn/' },
+                { id: 'qr-maps', url: 'https://maps.app.goo.gl/C8zA6MYpfeZcTCUg7' }
+            ];
+
+            qrConfigs.forEach(function(config) {
+                var container = document.getElementById(config.id);
+                if (container) {
+                    var qrDiv = container.querySelector('.qr-code-container');
+                    if (qrDiv) {
+                        // Clear any existing content
+                        qrDiv.innerHTML = '';
+                        try {
+                            new QRCode(qrDiv, {
+                                text: config.url,
+                                width: 70,
+                                height: 70,
+                                colorDark: '#0f1b2d',
+                                colorLight: '#ffffff',
+                                correctLevel: QRCode.CorrectLevel.H
+                            });
+                        } catch(e) {
+                            console.warn('QR generation for ' + config.id + ' failed:', e);
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
